@@ -1,0 +1,118 @@
+export const leccionesJS = {
+    funcionesYTiposDeDatos: "Funciones y tipos de datos",
+    practicaFuncionesYTiposDeDatos: "Práctica funciones y tipos de datos",
+    variablesYProcedimientos: "Variables y procedimientos",
+    logicaBooleana: "Lógica booleana",
+    listas: "Listas",
+    registros: "Registros",
+    recorridos: "Recorridos"
+}
+
+
+export const leccionesArray = {
+    funcionesYTiposDeDatos: [
+        "Introducción a JavaScript",
+        "Funciones, definición",
+        "Funciones, uso",
+        "Probando funciones",
+        "Haciendo cuentas",
+        "Poniendo topes",
+        "Libros de la buena memoria",
+        "Booleanos",
+        "Palabras, solo palabras",
+        "Operando strings",
+        "¡GRITAR!",
+        "¿Y qué tal si...?",
+        "¿De qué signo sos?",
+        "El retorno del booleano",
+        "Los premios",
+        "Tipos de datos",
+        "Datos de todo tipo"
+    ],
+    practicaFuncionesYTiposDeDatos: [
+        "Tiempo al tiempo",
+        "Comprando Hardware",
+        "¿Me conviene?",
+        "Triángulos",
+        "Cuadrados",
+        "¿Está afinado?",
+        "¿Está cerca?",
+        "Cartelitos",
+        "Más Cartelitos",
+        "Cartelitos óptimos",
+        "Cara o ceca",
+        "¡Envido!",
+        "¡Quiero retruco!",
+        "¡Quiero vale cuatro!"
+    ],
+    variablesYProcedimientos: [
+        "¿Y el tablero?",
+        "Impresión por pantalla",
+        "Martín Fierro",
+        "¿Y los procedimientos?",
+        "¿Y el programa?",
+        "Coerciones",
+        "El círculo de la vida",
+        "Pienso que así es más fácil",
+        "Esto no tiene valor",
+        "Variables globales",
+        "La buena fortuna",
+        "¿Y esto cuánto vale?"
+    ],
+    logicaBooleana: [
+        "¿Qué el último apague la luz!",
+        "Negar no cuesta nada",
+        "Los peripatéticos",
+        "La verdad detrás de la conjunción",
+        "¡Juguemos al T.E.G!",
+        "¿Y ahora... quién podrá ayudarnos?",
+        "Claroscuro",
+        "La verdad es que no hay una verdad",
+        "¡Hola! Mi nombre es Xor",
+        "Precedencia",
+        "Un ejercicio sin precedentes",
+        "¿Puedo subir?"
+    ],
+    listas: [
+        "Series favoritas",
+        "Y esto, es una lista",
+        "Juegos de azar",
+        "Listas vacías",
+        "¿Cuántos elementos tenés?",
+        "Agregando sabor",
+        "Trasladar",
+        "¿Y dónde está?",
+        "Contiene",
+        "Enésimo elemento",
+        "Más premios",
+        "No te olvides de saludar"
+    ],
+    registros: [
+        "Los primeros registros",
+        "Tu propio monumento",
+        "Accediendo al campo",
+        "Temperatura de planeta",
+        "Moviendo archivos",
+        "Registros de dos milenios",
+        "Postres complejos",
+        "Listas de registros",
+        "60 dulces minutos",
+        "Hay un registro en mi registro",
+        "¡Azúcar!"
+    ],
+    recorridos: [
+        "Las ganancias semestrales",
+        "¿Y el resto de las ganancias?",
+        "Todas las ganancias, la ganancia",
+        "Nos visita un viejo amigo",
+        "Cuentas claras",
+        "La ganancia promedio",
+        "Quién gana, quién pierde",
+        "Soy el mapa, soy el mapa",
+        "A filtrar, a filtrar cada cosa en su lugar",
+        "Un promedio más positivo",
+        "Esto es lo máximo",
+        "Como mínimo",
+        "Los mejores meses del año"
+    ]
+};

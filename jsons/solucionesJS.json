@@ -1,0 +1,488 @@
+{
+    "Introducción a JavaScript": {
+        "explicacion": "Mirar el video",
+        "soluciones": [
+            "Mirar el video"
+        ]
+    },
+    "Funciones, definición": {
+        "explicacion": "En JavaScript, definimos funciones con 'function', usando paréntesis para los parámetros. El operador de multiplicación es '*' y de división es '/'. Las funciones retornan valores con 'return', y cada línea termina con un ';'.",
+        "soluciones": [
+            "function mitad(n) {\n  return n / 2;\n}"
+        ]
+    },
+    "Funciones, uso": {
+        "explicacion": "En JavaScript, las funciones pueden llamarse dentro de otras funciones para reutilizar código y hacer cálculos más complejos. Por ejemplo, 'anteriorDelTriple' usa 'triple' para multiplicar por 3 y luego 'anterior' para restar 1.",
+        "soluciones": [
+            "function anterior(n) {\n  return n - 1;\n} \n\nfunction triple(n) {\n  return n * 3;\n}\n\nfunction anteriorDelTriple(n) {\n  return anterior(triple(n));\n}"
+        ]
+    },
+    "Probando funciones": {
+        "explicacion": "La consola permite probar expresiones y funciones rápidamente. Para usarla, escribí un comando y presioná Enter.",
+        "soluciones": [
+            "Escribir lo que dice ahi y precionar enter: \n 1: 4 + 5 \n 2: Math.round(4.5) \n 3: funcionMisteriosa(1, 2, 3)"
+        ]
+    },
+    "Haciendo cuentas": {
+        "explicacion": "JavaScript tiene funciones matemáticas listas para usar dentro del objeto 'Math'. Para llamarlas, se usa 'Math.funcion(valor)'.",
+        "soluciones": [
+            "1: Math.round(4.4)\n2: Math.round(4.6)\n3: Math.max(4, 7)\n4: Math.min(4, 7)"
+        ]
+    },
+    "Poniendo topes": {
+        "explicacion": "Usamos 'Math.max' para asegurarnos de que el saldo nunca sea negativo al extraer dinero.",
+        "soluciones": [
+            "function extraer(saldo, monto) {\n  return Math.max(0, saldo - monto);\n}"
+        ]
+    },
+    "Libros de la buena memoria": {
+        "explicacion": "Los operadores de comparación como '===', '>', '<' y '>=' permiten evaluar condiciones en JavaScript.",
+        "soluciones": [
+            "function leGustaLeer(n) {\n  return n > 20;\n}"
+        ]
+    },
+    "Booleanos": {
+        "explicacion": "Los operadores lógicos '&&' (y), '||' (o) y '!' (negación) permiten combinar condiciones en JavaScript.",
+        "soluciones": [
+            "function estaEntre(numero, minimo, maximo) {\n  return numero > minimo && numero < maximo;\n}\nfunction estaFueraDeRango(numero, minimo, maximo) {\n  return numero < minimo || numero > maximo;\n}"
+        ]
+    },
+    "Palabras, solo palabras": {
+        "explicacion": "Los strings son secuencias de caracteres y se pueden definir usando comillas simples o dobles. Se pueden realizar comparaciones y búsquedas dentro de ellos.",
+        "soluciones": [
+            "function esFinDeSemana(dia) {\n  return dia === \"sábado\" || dia === \"domingo\";\n}"
+        ]
+    },
+    "Operando strings": {
+        "explicacion": "Con los strings, podemos obtener su longitud, concatenarlos, y realizar comparaciones. Las funciones que trabajen con ellos son muy útiles para manipular texto.",
+        "soluciones": [
+            "function longitudNombreCompleto(nombre1, nombre2, nombre3) {\n  return nombre1.concat(nombre2, nombre3).length + 2;\n}",
+            "function longitudNombreCompleto(nombre1, nombre2, nombre3) {\n  return longitud(nombre1 + nombre2 + nombre3) + 2\n}",
+            "function longitudNombreCompleto(nombre1, nombre2, nombre3) {\n  return nombre1.length + nombre2.length + nombre3.length + 2;\n}"
+        ]
+    },
+    "¡GRITAR!": {
+        "explicacion": "La función gritar toma un string, lo convierte en mayúsculas y lo envuelve en signos de exclamación.",
+        "soluciones": [
+            "function gritar(nombre) {\n  return \"¡\" + convertirEnMayuscula(nombre) + \"!\";\n}"
+        ]
+    },
+    "¿Y qué tal si...?": {
+        "explicacion": "Para encontrar el valor máximo entre dos números, usamos una estructura condicional. Una forma de hacerlo es utilizando el operador ternario, o una alternativa más legible usando una estructura if-else.",
+        "soluciones": [
+            "function maximo(a, b) {\n  if (a > b) {\n    return a;\n  } else {\n    return b;\n  }\n}",
+            "function maximo(a, b) {\n  return a > b ? a : b;\n}"
+        ]
+    },
+    "¿De qué signo sos?": {
+        "explicacion": "Para manejar más de dos condiciones, utilizamos una estructura if-else if-else. Esta estructura permite manejar múltiples alternativas de forma secuencial.",
+        "soluciones": [
+            "function signo(n) {\n  if (n > 0) {\n    return 1;\n  } else if (n < 0) {\n    return -1;\n  } else {\n    return 0;\n  }\n}",
+            "function signo(n) {\n  return n >= 1 ? 1 : n < 0 ? -1 : 0;\n}"
+        ]
+    },
+    "El retorno del booleano": {
+        "explicacion": "En algunos casos, podemos evitar el uso de estructuras condicionales si la expresión booleana ya es suficiente por sí sola. Esto hace que el código sea más limpio y sencillo.",
+        "soluciones": [
+            "function esNumeroDeLaSuerte(n) {\n  return n >= 0 && n < 100 && n !== 15;\n}"
+        ]
+    },
+    "Los premios": {
+        "explicacion": "La función medallaSegunPuesto devuelve la medalla correspondiente según el puesto. Si el puesto es mayor que 3, se asigna 'nada'. La primera opción es más directa, mientras que la segunda es más eficiente y compacta.",
+        "soluciones": [
+            "function medallaSegunPuesto(n) {\n  if (n === 1) {\n    return 'oro';\n  } else if (n === 2) {\n    return 'plata';\n  } else if (n === 3) {\n    return 'bronce';\n  } else {\n    return 'nada';\n  }\n}",
+            "function medallaSegunPuesto(n) {\n  const medallas = ['oro', 'plata', 'bronce'];\n  const puesto = n - 1;\n  return puesto < medallas.length && puesto >= 0 ? medallas[puesto] : 'nada';\n}"
+        ]
+    },
+    "Tipos de datos": {
+        "explicacion": "En JavaScript existen diferentes tipos de datos: números, booleanos y strings, y cada tipo tiene operaciones específicas que podemos realizar. Es importante usar los operadores adecuados según el tipo de dato para evitar resultados inesperados. En este caso, algunas operaciones pueden generar errores si se aplican de forma incorrecta.",
+        "soluciones": [
+            "1: 5 + 6\n2: 5 === 6\n3: 8 > 6\n4: !true\n5: false / true"
+        ]
+    },
+    "Datos de todo tipo": {
+        "explicacion": "Marcar las siguientes",
+        "soluciones": [
+            " Primera \n Segunda \n Cuarta \n Quinta \n Septima \n Ocatava"
+        ]
+    },
+    "Tiempo al tiempo": {
+        "explicacion": "Las funciones aniosEnDias y diasEnAnios permiten convertir edades entre años y días. En aniosEnDias, multiplicamos los años por 365, mientras que en diasEnAnios dividimos los días entre 365. Al combinar las dos funciones, el resultado debería ser el mismo valor inicial, pero con diferente formato (años/días).",
+        "soluciones": [
+            "function aniosEnDias(n) {\n  return n * 365\n}",
+            "function diasEnAnios(n) {\n  return n / 365\n}"
+        ]
+    },
+    "Comprando Hardware": {
+        "explicacion": "La función cuantoCuesta calcula el precio total de una computadora. Multiplica el número de pulgadas del monitor por 60, el número de GB de memoria por 200 y suma el precio base de los demás componentes, que es 1000.",
+        "soluciones": [
+            "function cuantoCuesta(pulgadas, memoria) {\n  return pulgadas * 60 + memoria * 200 + 1000\n}"
+        ]
+    },
+    "¿Me conviene?": {
+        "explicacion": "La función meConviene determina si una computadora es conveniente para comprar. Verifica si el precio es menor a 6000, el monitor tiene al menos 32 pulgadas y la memoria es al menos de 8GB.",
+        "soluciones": [
+            "function meConviene(pulgadas, memoria) {\n  return pulgadas >= 32 && memoria >= 8 && cuantoCuesta(pulgadas, memoria) < 6000\n}"
+        ]
+    },
+    "Triángulos": {
+        "explicacion": "Las funciones perimetroTriangulo y areaTriangulo calculan el perímetro y el área de un triángulo respectivamente. La primera suma los tres lados del triángulo, mientras que la segunda calcula el área usando la fórmula base * altura / 2.",
+        "soluciones": [
+            "function perimetroTriangulo(a, b, c) {\n  return a + b + c\n}\nfunction areaTriangulo(b, a) {\n  return (b * a) / 2\n}"
+        ]
+    },
+    "Cuadrados": {
+        "explicacion": "Las funciones perimetroCuadrado y areaCuadrado calculan el perímetro y el área de un cuadrado respectivamente. El perímetro se obtiene multiplicando el lado por 4, mientras que el área se calcula elevando el lado al cuadrado.",
+        "soluciones": [
+            "function perimetroCuadrado(a) {\n  return a * 4\n}\nfunction areaCuadrado(a) {\n  return a * a\n}"
+        ]
+    },
+    "¿Está afinado?": {
+        "explicacion": "La función estaAfinado verifica si la frecuencia del sonido es 440Hz, que corresponde a la nota La central en un piano afinado.",
+        "soluciones": [
+            "function estaAfinado(n) {\n  return n === 440\n}"
+        ]
+    },
+    "¿Está cerca?": {
+        "explicacion": "La función estaCerca verifica si una frecuencia está en el rango de 437Hz a 443Hz, pero excluye el valor exacto de 440Hz.",
+        "soluciones": [
+            "function estaCerca(n) {\n  return n !== 440 && n >= 437 && n <= 443\n}"
+        ]
+    },
+    "Cartelitos": {
+        "explicacion": "La función escribirCartelito toma el título, nombre y apellido y los combina en un único string. La primera solución utiliza concatenación normal, mientras que la segunda usa template strings para hacerlo de forma más limpia.",
+        "soluciones": [
+            "function escribirCartelito(titulo, nombre, apellido) {\n  return titulo + ' ' + nombre + ' ' + apellido;\n}",
+            "function escribirCartelito(titulo, nombre, apellido) {\n  return `${titulo} ${nombre} ${apellido}`;\n}"
+        ]
+    },
+    "Más Cartelitos": {
+        "explicacion": "La función escribirCartelito ahora toma un booleano que determina si el cartelito será corto o largo. La primera opción usa una estructura más simple, concatenando el nombre solo cuando es necesario, mientras que la segunda usa un operador ternario para decidir si incluye el nombre.",
+        "soluciones": [
+            "function escribirCartelito(titulo, nombre, apellido, bool) {\n  if (bool) {\n    return titulo + ' ' + apellido;\n  } else {\n    return titulo + ' ' + nombre + ' ' + apellido;\n  }\n}",
+            "function escribirCartelito(titulo, nombre, apellido, bool) {\n  const name = bool ? '' : ' ' + nombre;\n  return `${titulo}${name} ${apellido}`;\n}"
+        ]
+    },
+    "Cartelitos óptimos": {
+        "explicacion": "La función escribirCartelitoOptimo utiliza la longitud total del nombre y apellido para decidir si debe generar un cartelito corto o largo. Si la longitud total es mayor a 15, se genera un cartelito corto; de lo contrario, se genera uno largo. La función escribirCartelito ya está definida y se reutiliza.",
+        "soluciones": [
+            "function escribirCartelitoOptimo(titulo, nombre, apellido) {\n  if ((nombre + apellido).length > 15) {\n    return escribirCartelito(titulo, nombre, apellido, true);\n  } else {\n    return escribirCartelito(titulo, nombre, apellido, false);\n  }\n}",
+            "function escribirCartelitoOptimo(titulo, nombre, apellido) {\n  const optimo = (nombre + apellido).length > 15;\n  const cartelito = escribirCartelito(titulo, nombre, apellido, optimo);\n  return cartelito;\n}"
+        ]
+    },
+    "Cara o ceca": {
+        "explicacion": "La función decisionConMoneda toma tres parámetros: el resultado de la moneda y dos opciones. Si el resultado de la moneda es 'cara', se elige la primera opción; de lo contrario, se elige la segunda.",
+        "soluciones": [
+            "function decisionConMoneda(moneda, eleccion1, eleccion2) {\n  if (moneda === 'cara') {\n    return eleccion1;\n  } else {\n    return eleccion2;\n  }\n}",
+            "function decisionConMoneda(moneda, eleccion1, eleccion2) {\n  return moneda === 'cara' ? eleccion1 : eleccion2;\n}"
+        ]
+    },
+    "¡Envido!": {
+        "explicacion": "La función valorEnvido retorna el valor de una carta de acuerdo con las reglas del envido. Si la carta está entre 10 y 12, su valor es 0. De lo contrario, su valor es igual a la numeración de la carta. Esta solución es directa y sencilla.",
+        "soluciones": [
+            "function valorEnvido(carta) {\n  if (carta >= 10 && carta <= 12) return 0;\n  return carta;\n}"
+        ]
+    },
+    "¡Quiero retruco!": {
+        "explicacion": "La función puntosDeEnvidoTotales calcula los puntos de envido según las reglas del juego. Si las dos cartas son del mismo palo, se suman sus valores de envido más 20. Si no son del mismo palo, se toma el valor más alto entre las dos cartas.",
+        "soluciones": [
+            "function puntosDeEnvidoTotales(carta1, palo1, carta2, palo2) {\n  const mismoPalo = palo1 === palo2;\n  if (mismoPalo) return valorEnvido(carta1) + valorEnvido(carta2) + 20;\n  return Math.max(valorEnvido(carta1), valorEnvido(carta2));\n}"
+        ]
+    },
+    "¡Quiero vale cuatro!": {
+        "explicacion": "La primera solución utiliza una estructura 'if-else' para verificar el tipo de canto y devolver los puntos correspondientes. La segunda solución utiliza el operador ternario, lo que la hace más compacta.",
+        "soluciones": [
+            "function valorCantoTruco(string) {\n  if (string === 'truco') {\n    return 2;\n  } else if (string === 'retruco') {\n    return 3;\n  } else {\n    return 4;\n  }",
+            "function valorCantoTruco(string) {\n  return string === 'truco' ? 2 : string === 'retruco' ? 3 : 4;\n}"
+        ]
+    },
+    "¿Y el tablero?": {
+        "explicacion": "En JavaScript no hay un 'tablero' visual para seguir la ejecución del programa, pero podemos usar la consola para analizar el comportamiento del código.",
+        "soluciones": [
+            "Escribir funcionMisteriosa() en la consola."
+        ]
+    },
+    "Impresión por pantalla": {
+        "explicacion": "En JavaScript, aunque no hay un 'tablero', se puede imprimir en pantalla usando funciones como console.log o imprimir en ciertos entornos.",
+        "soluciones": [
+            "Escribir funcionEgocentrica() en la consola."
+        ]
+    },
+    "Martín Fierro": {
+        "explicacion": "La función versosMartinFierro imprime los primeros versos del Martín Fierro en la pantalla y devuelve 0. Esto demuestra cómo se pueden imprimir múltiples líneas en JavaScript.",
+        "soluciones": [
+            "function versosMartinFierro() {\n imprimir('Aquí me pongo a cantar');\n imprimir('Al compás de la vigüela;');\n imprimir('Que el hombre que lo desvela');\n imprimir('Una pena extraordinaria');\n return 0;\n}"
+        ]
+    },
+    "¿Y los procedimientos?": {
+        "explicacion": "En JavaScript, los procedimientos se declaran igual que las funciones, pero no retornan un valor. versosMartinFierro es un procedimiento porque solo imprime texto y no devuelve nada.",
+        "soluciones": [
+            "function versosMartinFierro() {\n imprimir('Aquí me pongo a cantar');\n imprimir('Al compás de la vigüela;');\n imprimir('Que el hombre que lo desvela');\n imprimir('Una pena extraordinaria');\n}"
+        ]
+    },
+    "¿Y el programa?": {
+        "explicacion": "En JavaScript, todo lo que escribimos fuera de una función actúa como el punto de entrada del programa. Así, el código se ejecuta secuencialmente desde el inicio hasta el final.",
+        "soluciones": [
+            "imprimir('Hola, mundo!');\nimprimir('Tirando dados');\nimprimir('La primera tirada dio ' + tirarDado());\nimprimir('La segunda tirada dio ' + tirarDado());\nimprimir('La tercera tirada dio ' + tirarDado());"
+        ]
+    },
+    "Coerciones": {
+        "explicacion": "En JavaScript, el operador + tiene un comportamiento distinto dependiendo de los tipos de datos que se operen. Si un número y un string se operan con +, el número se convierte a string y se concatenan. En este caso, la función elefantesEquilibristas toma un número y lo convierte a un string para crear una rima.",
+        "soluciones": [
+            "function elefantesEquilibristas(n) {\n return n + ' elefantes se balanceaban';\n}"
+        ]
+    },
+    "El círculo de la vida": {
+        "explicacion": "Las funciones perimetroCirculo y areaCirculo calculan el perímetro y el área de un círculo, respectivamente, utilizando la fórmula matemática para cada uno. El valor de pi se aproxima a 3.14159265358979 para realizar los cálculos.",
+        "soluciones": [
+            "function perimetroCirculo(r) {\n  return 2 * 3.14159265358979 * r;\n}\nfunction areaCirculo(r) {\n  return 3.14159265358979 * (r * r);\n}"
+        ]
+    },
+    "Pienso que así es más fácil": {
+        "explicacion": "Las variables nos permiten almacenar valores para reutilizarlos en varias partes del código. En este caso, se reemplazó el valor de pi por la variable pi para simplificar el código y facilitar cambios futuros.",
+        "soluciones": [
+            "let pi = 3.14159265358979;\nfunction perimetroCirculo(r) {\n  return 2 * pi * r;\n}\nfunction areaCirculo(r) {\n  return pi * (r * r);\n}"
+        ]
+    },
+    "Esto no tiene valor": {
+        "explicacion": "Si intentamos usar una variable a la que no se le ha asignado un valor, JavaScript devolverá 'undefined'. Esto ocurre porque la variable 'numero' no tiene un valor definido antes de intentar usarla en la función.",
+        "soluciones": [
+            "escribir en la consola sumaSinSentido()"
+        ]
+    },
+    "Variables globales": {
+        "explicacion": "Es necesario inicializar las variables antes de usarlas. Las variables locales, declaradas dentro de una función, solo pueden ser utilizadas dentro de esa función, mientras que las variables globales pueden ser utilizadas en cualquier parte del programa. En este caso, la función 'ascensorSobrecargado' utiliza dos variables globales para calcular si el peso total de las personas excede la carga máxima.",
+        "soluciones": [
+            "const cargaMaximaEnKilogramos = 300;\n\nfunction ascensorSobrecargado(p) {\n  return p * pesoPromedioPersonaEnKilogramos > cargaMaximaEnKilogramos;\n}"
+        ]
+    },
+    "La buena fortuna": {
+        "explicacion": "Las variables en JavaScript pueden modificarse, y es posible actualizar su valor dentro de las funciones. En este caso, el procedimiento 'aumentarFortuna' duplica el valor de la variable global 'pesosEnMiBilletera'.",
+        "soluciones": [
+            "function aumentarFortuna() {\n  pesosEnMiBilletera *= 2;\n}"
+        ]
+    },
+    "¿Y esto cuánto vale?": {
+        "explicacion": "En la función 'cuentaExtravagante', el valor de la variable 'numero' se modifica varias veces: primero se multiplica por 2, luego se le suma 4. Finalmente, la función retorna el valor de 'numero', que es 20.",
+        "soluciones": [
+            "20"
+        ]
+    },
+    "¿Qué el último apague la luz!": {
+        "explicacion": "El operador '!' se utiliza para negar un valor booleano, lo que permite alternar entre dos estados. En este caso, el procedimiento 'usarCierre' alterna entre abrir y cerrar el cierre de la mochila al cambiar el valor de la variable 'mochilaAbierta'.",
+        "soluciones": [
+            "let mochilaAbierta = true;\n\nfunction usarCierre() {\n  mochilaAbierta = !mochilaAbierta;\n}"
+        ]
+    },
+    "Negar no cuesta nada": {
+        "explicacion": "Al negarse la función 'esMayorDeEdad', se crea una nueva función 'esMenorDeEdad' que determina si una persona no es mayor de edad. Es una forma eficiente de reutilizar la lógica de la función original.",
+        "soluciones": [
+            "function esMayorDeEdad(n) {\n  return n >= 18;\n}\n\nfunction esMenorDeEdad(n) {\n  return !esMayorDeEdad(n);\n}"
+        ]
+    },
+    "Los peripatéticos": {
+        "explicacion": "El operador '&&' se utiliza para combinar varias condiciones, y todas deben ser verdaderas para que la expresión total sea verdadera. En la función 'esPeripatetico', se evalúan tres condiciones: la profesión debe ser 'filósofo', la nacionalidad debe ser 'griego' y la cantidad de kilómetros caminados debe ser mayor a 2 para que una persona sea considerada peripatética.",
+        "soluciones": [
+            "function esPeripatetico(prof, nac, km) {\n  return prof === \"filósofo\" && nac === \"griego\" && km > 2;\n}"
+        ]
+    },
+    "La verdad detrás de la conjunción": {
+        "explicacion": "El operador '&&' representa la conjunción lógica, que retorna verdadero solo cuando ambas condiciones son verdaderas. En este caso, la función 'consumePocaEnergia' evalúa si se usan 24 grados en el aire acondicionado y al menos 5 lamparitas bajo consumo, siguiendo la tabla de verdad de la conjunción lógica.",
+        "soluciones": [
+            "  consumePocaEnergia(24, 0) \n  consumePocaEnergia(21, 7) \n  consumePocaEnergia(18, 1) \n  consumePocaEnergia(24, 5)"
+        ]
+    },
+    "¡Juguemos al T.E.G!": {
+        "explicacion": "El operador '||' representa la disyunción lógica, que retorna verdadero cuando al menos una de las condiciones es verdadera. En este caso, la función 'gano' evalúa si un jugador ha cumplido con su objetivo secreto o ha conquistado 30 países para ganar.",
+        "soluciones": [
+            " gano(true, 25) \n gano(false, 30) \n gano(true, 31) \n gano(false, 20)"
+        ]
+    },
+    "¿Y ahora... quién podrá ayudarnos?": {
+        "explicacion": "La función 'estaCerrado' ayuda a verificar si el banco está cerrado, lo que ocurre si es feriado, es fin de semana, o si no estamos dentro del horario bancario. Utiliza la función 'esFinDeSemana' para verificar el día y la función 'dentroDeHorarioBancario' para verificar el horario.",
+        "soluciones": [
+            "function estaCerrado(esFeriado, dia, horario) {\n  return esFeriado || esFinDeSemana(dia) || !dentroDeHorarioBancario(horario);\n}\nfunction esFinDeSemana(dia) {\n  return dia === 'sábado' || dia === 'domingo';\n}"
+        ]
+    },
+    "Claroscuro": {
+        "explicacion": "La función 'tieneContraste' determina si el contraste entre el color de la letra y el fondo es adecuado. Esto se verifica comparando si uno de los colores es claro y el otro no lo es. Para eso, usa la función 'esTonoClaro' que verifica si un color es claro o no.",
+        "soluciones": [
+            "function tieneContraste(letra, fondo) {\n  return esTonoClaro(letra) !== esTonoClaro(fondo);\n}"
+        ]
+    },
+    "La verdad es que no hay una verdad": {
+        "explicacion": "La función 'tieneContraste' determina si hay contraste entre el color de la letra y el fondo, evaluando si uno de ellos es claro y el otro no lo es. La tabla de verdad para esta función se basa en el valor de verdad de 'esTonoClaro' para cada color.",
+        "soluciones": [
+            "tieneContraste('amarillo', 'beige')\ntieneContraste('azul', 'violeta')\ntieneContraste('blanco', 'negro')"
+        ]
+    },
+    "¡Hola! Mi nombre es Xor": {
+        "explicacion": "La disyunción lógica excluyente (xor) es un operador que devuelve verdadero si y solo si uno de los dos valores es verdadero, pero no ambos. En este caso, se puede definir como 'bool1 !== bool2', que es lo mismo que decir que los valores no son iguales.",
+        "soluciones": [
+            "function xor(bool1, bool2){\n  return bool1 !== bool2\n}"
+        ]
+    },
+    "Precedencia": {
+        "explicacion": "En esta expresión, los operadores se ejecutan en el siguiente orden de precedencia: primero se evalúan las operaciones lógicas como la negación (!) y la disyunción (||), luego se evalúa el operador de comparación (>=) y, por último, las operaciones aritméticas. Esto determina cómo se ejecuta cada parte de la expresión.",
+        "soluciones": [
+            "pagaConTarjeta(true, 'crédito', 320)\npagaConTarjeta(false, 'crédito', 80)\npagaConTarjeta(true, 'débito', 215)\npagaConTarjeta(true, 'débito', 32)\n"
+        ]
+    },
+    "Un ejercicio sin precedentes": {
+        "explicacion": "La función 'sePuedeConcentrar' verifica si una persona puede concentrarse dependiendo de la bebida, la temperatura de la bebida y un valor booleano adicional que indica si la persona está en condiciones para concentrarse.",
+        "soluciones": [
+            "function sePuedeConcentrar(bebida, temp, bool){\n  const mate = bebida === \"mate\" && temp === 80\n  const teCaliente = bebida === \"té\" && temp >= 95\n  return (mate || teCaliente) && bool\n}"
+        ]
+    },
+    "¿Puedo subir?": {
+        "explicacion": "La función 'puedeSubirse' evalúa si una persona puede subirse a la montaña rusa, considerando si cumple con la altura mínima, si está acompañada por un adulto y si no tiene afecciones cardíacas. La primera función es más explícita y usa estructuras de control (if) para hacer las evaluaciones paso a paso, mientras que la segunda versión es más concisa, utilizando operadores lógicos en una sola línea para hacer las mismas evaluaciones.",
+        "soluciones": [
+            "function puedeSubirse(m, doble, afeccion) {\n  if (m >= 1.5 || (m >= 1.2 && doble)) {\n    if (!afeccion) {\n      return true;\n    }\n  }\n  return false;\n}",
+            "const puedeSubirse = (m, doble, affecion) => {\n  const cumpleAltura = m >= 1.5 || (m >= 1.2 && doble)\n  return cumpleAltura && !affecion\n}"
+        ]
+    },
+    "Series favoritas": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Y esto, es una lista": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Juegos de azar": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Listas vacías": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "¿Cuántos elementos tenés?": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Agregando sabor": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Trasladar": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "¿Y dónde está?": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Contiene": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Enésimo elemento": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Más premios": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "No te olvides de saludar": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Los primeros registros": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Tu propio monumento": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Accediendo al campo": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Temperatura de planeta": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Moviendo archivos": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Registros de dos milenios": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Postres complejos": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Listas de registros": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "60 dulces minutos": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Hay un registro en mi registro": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "¡Azúcar!": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Las ganancias semestrales": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "¿Y el resto de las ganancias?": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Todas las ganancias, la ganancia": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Nos visita un viejo amigo": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Cuentas claras": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "La ganancia promedio": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Quién gana, quién pierde": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Soy el mapa, soy el mapa": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "A filtrar, a filtrar cada cosa en su lugar": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Un promedio más positivo": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Esto es lo máximo": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Como mínimo": {
+        "explicacion": "",
+        "soluciones": []
+    },
+    "Los mejores meses del año": {
+        "explicacion": "",
+        "soluciones": []
+    }
+}
