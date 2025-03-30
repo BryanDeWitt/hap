@@ -13,15 +13,18 @@ export const Solucion = () => {
     const handleShow = () => {
         setShow(!show)
     }
+    const handleButton = () => {
+        if (show) setShow(false)
+    }
     
     return (
         <>
             <h1>Solucion para: { leccion }</h1>
             <h3 className='explicacion'>{ solucion.explicacion ? solucion.explicacion : 'No se ha encontrado la solucion' }</h3>
             <div className='botones'>
-                {Number(index) > 0 && <Link to={`/soluciones/javaScript/${id}/${Number(index) - 1 < 0 ? 0 : Number(index) - 1}`}><button onClick={handleShow}>Anterior</button></Link>}
+                {Number(index) > 0 && <Link to={`/soluciones/javaScript/${id}/${Number(index) - 1 < 0 ? 0 : Number(index) - 1}`}><button onClick={handleButton}>Anterior</button></Link>}
                 <button onClick={handleShow}>{ show ? 'Ocultar codigo' : 'Mostrar codigo' }</button>
-                {Number(index) < maxIndex && <Link to={`/soluciones/javaScript/${id}/${Number(index) + 1 > maxIndex ? maxIndex : Number(index) + 1}`}><button onClick={handleShow}>Siguiente</button></Link>}
+                {Number(index) < maxIndex && <Link to={`/soluciones/javaScript/${id}/${Number(index) + 1 > maxIndex ? maxIndex : Number(index) + 1}`}><button onClick={handleButton}>Siguiente</button></Link>}
             </div>
             { solucion.pseudocode && 
                 <>
