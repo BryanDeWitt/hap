@@ -9,12 +9,20 @@
         "explicacion": "En JavaScript, definimos funciones con 'function', usando paréntesis para los parámetros. El operador de multiplicación es '*' y de división es '/'. Las funciones retornan valores con 'return', y cada línea termina con un ';'.",
         "soluciones": [
             "function mitad(n) {\n  return n / 2;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada mitad con un parámetro n\nDividir n entre 2\nRetornar el resultado"
         ]
     },
     "Funciones, uso": {
         "explicacion": "En JavaScript, las funciones pueden llamarse dentro de otras funciones para reutilizar código y hacer cálculos más complejos. Por ejemplo, 'anteriorDelTriple' usa 'triple' para multiplicar por 3 y luego 'anterior' para restar 1.",
         "soluciones": [
             "function anterior(n) {\n  return n - 1;\n} \n\nfunction triple(n) {\n  return n * 3;\n}\n\nfunction anteriorDelTriple(n) {\n  return anterior(triple(n));\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada anterior con un parámetro n\nRestar 1 a n\nRetornar el resultado",
+            "Definir una función llamada triple con un parámetro n\nMultiplicar n por 3\nRetornar el resultado",
+            "Definir una función llamada anteriorDelTriple con un parámetro n\nLlamar a la función triple con n\nLlamar a la función anterior con el resultado de triple\nRetornar el resultado"
         ]
     },
     "Probando funciones": {
@@ -33,24 +41,36 @@
         "explicacion": "Usamos 'Math.max' para asegurarnos de que el saldo nunca sea negativo al extraer dinero.",
         "soluciones": [
             "function extraer(saldo, monto) {\n  return Math.max(0, saldo - monto);\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada extraer con dos parámetros: saldo y monto\nRestar monto a saldo\nSi el resultado es menor que 0, devolver 0\nSi no, devolver el resultado de la resta"
         ]
     },
     "Libros de la buena memoria": {
         "explicacion": "Los operadores de comparación como '===', '>', '<' y '>=' permiten evaluar condiciones en JavaScript.",
         "soluciones": [
             "function leGustaLeer(n) {\n  return n > 20;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada leGustaLeer con un parámetro n\nComparar si n es mayor que 20\nRetornar el resultado de la comparación"
         ]
     },
     "Booleanos": {
         "explicacion": "Los operadores lógicos '&&' (y), '||' (o) y '!' (negación) permiten combinar condiciones en JavaScript.",
         "soluciones": [
-            "function estaEntre(numero, minimo, maximo) {\n  return numero > minimo && numero < maximo;\n}\nfunction estaFueraDeRango(numero, minimo, maximo) {\n  return numero < minimo || numero > maximo;\n}"
+            "function estaEntre(numero, minimo, maximo) {\n  return numero > minimo && numero < maximo;\n}\n\nfunction estaFueraDeRango(numero, minimo, maximo) {\n  return numero < minimo || numero > maximo;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada estaEntre con tres parámetros: numero, minimo y maximo\nComprobar si numero es mayor que minimo y menor que maximo\nRetornar el resultado de la comparación\n\nDefinir una función llamada estaFueraDeRango con tres parámetros: numero, minimo y maximo\nComprobar si numero es menor que minimo o mayor que maximo\nRetornar el resultado de la comparación"
         ]
     },
     "Palabras, solo palabras": {
         "explicacion": "Los strings son secuencias de caracteres y se pueden definir usando comillas simples o dobles. Se pueden realizar comparaciones y búsquedas dentro de ellos.",
         "soluciones": [
             "function esFinDeSemana(dia) {\n  return dia === \"sábado\" || dia === \"domingo\";\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada esFinDeSemana con un parámetro dia\nComparar si dia es igual a \"sábado\" o \"domingo\"\nRetornar el resultado de la comparación"
         ]
     },
     "Operando strings": {
@@ -59,12 +79,18 @@
             "function longitudNombreCompleto(nombre1, nombre2, nombre3) {\n  return nombre1.concat(nombre2, nombre3).length + 2;\n}",
             "function longitudNombreCompleto(nombre1, nombre2, nombre3) {\n  return longitud(nombre1 + nombre2 + nombre3) + 2\n}",
             "function longitudNombreCompleto(nombre1, nombre2, nombre3) {\n  return nombre1.length + nombre2.length + nombre3.length + 2;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada longitudNombreCompleto con tres parámetros: nombre1, nombre2 y nombre3\nConcatenar nombre1, nombre2 y nombre3\nObtener la longitud del string resultante\nSumar 2 al resultado\nRetornar el valor final"
         ]
     },
     "¡GRITAR!": {
         "explicacion": "La función gritar toma un string, lo convierte en mayúsculas y lo envuelve en signos de exclamación.",
         "soluciones": [
             "function gritar(nombre) {\n  return \"¡\" + convertirEnMayuscula(nombre) + \"!\";\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada gritar con un parámetro nombre\nConvertir nombre a mayúsculas\nConcatenar el signo de exclamación '¡' al inicio y '!' al final\nRetornar el resultado"
         ]
     },
     "¿Y qué tal si...?": {
@@ -72,6 +98,9 @@
         "soluciones": [
             "function maximo(a, b) {\n  if (a > b) {\n    return a;\n  } else {\n    return b;\n  }\n}",
             "function maximo(a, b) {\n  return a > b ? a : b;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada maximo con dos parámetros: a y b\nSi a es mayor que b, retornar a\nSi no, retornar b"
         ]
     },
     "¿De qué signo sos?": {
@@ -79,12 +108,18 @@
         "soluciones": [
             "function signo(n) {\n  if (n > 0) {\n    return 1;\n  } else if (n < 0) {\n    return -1;\n  } else {\n    return 0;\n  }\n}",
             "function signo(n) {\n  return n >= 1 ? 1 : n < 0 ? -1 : 0;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada signo con un parámetro n\nSi n es mayor que 0, retornar 1\nSi n es menor que 0, retornar -1\nSi no, retornar 0"
         ]
     },
     "El retorno del booleano": {
         "explicacion": "En algunos casos, podemos evitar el uso de estructuras condicionales si la expresión booleana ya es suficiente por sí sola. Esto hace que el código sea más limpio y sencillo.",
         "soluciones": [
             "function esNumeroDeLaSuerte(n) {\n  return n >= 0 && n < 100 && n !== 15;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada esNumeroDeLaSuerte con un parámetro n\nComprobar si n es mayor o igual que 0, menor que 100 y diferente de 15\nRetornar el resultado de la comparación"
         ]
     },
     "Los premios": {
@@ -92,6 +127,9 @@
         "soluciones": [
             "function medallaSegunPuesto(n) {\n  if (n === 1) {\n    return 'oro';\n  } else if (n === 2) {\n    return 'plata';\n  } else if (n === 3) {\n    return 'bronce';\n  } else {\n    return 'nada';\n  }\n}",
             "function medallaSegunPuesto(n) {\n  const medallas = ['oro', 'plata', 'bronce'];\n  const puesto = n - 1;\n  return puesto < medallas.length && puesto >= 0 ? medallas[puesto] : 'nada';\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada medallaSegunPuesto con un parámetro n\nSi n es igual a 1, retornar 'oro'\nSi n es igual a 2, retornar 'plata'\nSi n es igual a 3, retornar 'bronce'\nSi no, retornar 'nada'"
         ]
     },
     "Tipos de datos": {
@@ -111,42 +149,63 @@
         "soluciones": [
             "function aniosEnDias(n) {\n  return n * 365\n}",
             "function diasEnAnios(n) {\n  return n / 365\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada aniosEnDias con un parámetro n\nMultiplicar n por 365 y retornar el resultado\n\nDefinir una función llamada diasEnAnios con un parámetro n\nDividir n entre 365 y retornar el resultado"
         ]
     },
     "Comprando Hardware": {
         "explicacion": "La función cuantoCuesta calcula el precio total de una computadora. Multiplica el número de pulgadas del monitor por 60, el número de GB de memoria por 200 y suma el precio base de los demás componentes, que es 1000.",
         "soluciones": [
             "function cuantoCuesta(pulgadas, memoria) {\n  return pulgadas * 60 + memoria * 200 + 1000\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada cuantoCuesta con dos parámetros: pulgadas y memoria\nMultiplicar pulgadas por 60\nMultiplicar memoria por 200\nSumar 1000 al resultado\nRetornar el resultado final"
         ]
     },
     "¿Me conviene?": {
         "explicacion": "La función meConviene determina si una computadora es conveniente para comprar. Verifica si el precio es menor a 6000, el monitor tiene al menos 32 pulgadas y la memoria es al menos de 8GB.",
         "soluciones": [
             "function meConviene(pulgadas, memoria) {\n  return pulgadas >= 32 && memoria >= 8 && cuantoCuesta(pulgadas, memoria) < 6000\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada meConviene con dos parámetros: pulgadas y memoria\nVerificar si pulgadas es mayor o igual a 32\nVerificar si memoria es mayor o igual a 8\nVerificar si el precio de la computadora es menor a 6000 utilizando cuantoCuesta\nRetornar el resultado de la combinación de estas tres condiciones"
         ]
     },
     "Triángulos": {
         "explicacion": "Las funciones perimetroTriangulo y areaTriangulo calculan el perímetro y el área de un triángulo respectivamente. La primera suma los tres lados del triángulo, mientras que la segunda calcula el área usando la fórmula base * altura / 2.",
         "soluciones": [
             "function perimetroTriangulo(a, b, c) {\n  return a + b + c\n}\nfunction areaTriangulo(b, a) {\n  return (b * a) / 2\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada perimetroTriangulo con tres parámetros: a, b, c\nSumar a, b y c y retornar el resultado\n\nDefinir una función llamada areaTriangulo con dos parámetros: b y a\nMultiplicar b por a\nDividir el resultado entre 2 y retornar el valor final"
         ]
     },
     "Cuadrados": {
         "explicacion": "Las funciones perimetroCuadrado y areaCuadrado calculan el perímetro y el área de un cuadrado respectivamente. El perímetro se obtiene multiplicando el lado por 4, mientras que el área se calcula elevando el lado al cuadrado.",
         "soluciones": [
             "function perimetroCuadrado(a) {\n  return a * 4\n}\nfunction areaCuadrado(a) {\n  return a * a\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada perimetroCuadrado con un parámetro: a\nMultiplicar a por 4 y retornar el resultado\n\nDefinir una función llamada areaCuadrado con un parámetro: a\nMultiplicar a por sí mismo (a * a) y retornar el resultado"
         ]
     },
     "¿Está afinado?": {
         "explicacion": "La función estaAfinado verifica si la frecuencia del sonido es 440Hz, que corresponde a la nota La central en un piano afinado.",
         "soluciones": [
             "function estaAfinado(n) {\n  return n === 440\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada estaAfinado con un parámetro: n\nVerificar si n es igual a 440\nRetornar el resultado de la comparación"
         ]
     },
     "¿Está cerca?": {
         "explicacion": "La función estaCerca verifica si una frecuencia está en el rango de 437Hz a 443Hz, pero excluye el valor exacto de 440Hz.",
         "soluciones": [
             "function estaCerca(n) {\n  return n !== 440 && n >= 437 && n <= 443\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada estaCerca con un parámetro: n\nVerificar si n no es igual a 440\nVerificar si n es mayor o igual a 437\nVerificar si n es menor o igual a 443\nRetornar el resultado de la combinación de estas condiciones"
         ]
     },
     "Cartelitos": {
@@ -154,6 +213,9 @@
         "soluciones": [
             "function escribirCartelito(titulo, nombre, apellido) {\n  return titulo + ' ' + nombre + ' ' + apellido;\n}",
             "function escribirCartelito(titulo, nombre, apellido) {\n  return `${titulo} ${nombre} ${apellido}`;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada escribirCartelito con tres parámetros: titulo, nombre y apellido\nConcatenar titulo, nombre y apellido con espacios entre ellos\nRetornar el resultado de la concatenación"
         ]
     },
     "Más Cartelitos": {
@@ -161,6 +223,9 @@
         "soluciones": [
             "function escribirCartelito(titulo, nombre, apellido, bool) {\n  if (bool) {\n    return titulo + ' ' + apellido;\n  } else {\n    return titulo + ' ' + nombre + ' ' + apellido;\n  }\n}",
             "function escribirCartelito(titulo, nombre, apellido, bool) {\n  const name = bool ? '' : ' ' + nombre;\n  return `${titulo}${name} ${apellido}`;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada escribirCartelito con cuatro parámetros: titulo, nombre, apellido, bool\nVerificar si bool es verdadero\nSi es verdadero, concatenar titulo y apellido\nSi es falso, concatenar titulo, nombre y apellido\nRetornar el resultado de la concatenación"
         ]
     },
     "Cartelitos óptimos": {
@@ -168,6 +233,9 @@
         "soluciones": [
             "function escribirCartelitoOptimo(titulo, nombre, apellido) {\n  if ((nombre + apellido).length > 15) {\n    return escribirCartelito(titulo, nombre, apellido, true);\n  } else {\n    return escribirCartelito(titulo, nombre, apellido, false);\n  }\n}",
             "function escribirCartelitoOptimo(titulo, nombre, apellido) {\n  const optimo = (nombre + apellido).length > 15;\n  const cartelito = escribirCartelito(titulo, nombre, apellido, optimo);\n  return cartelito;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada escribirCartelitoOptimo con tres parámetros: titulo, nombre, apellido\nConcatenar nombre y apellido para calcular su longitud\nVerificar si la longitud total es mayor a 15\nSi es mayor a 15, llamar a escribirCartelito con el valor 'true' para generar un cartelito corto\nSi no es mayor a 15, llamar a escribirCartelito con el valor 'false' para generar un cartelito largo\nRetornar el resultado de la función escribirCartelito"
         ]
     },
     "Cara o ceca": {
@@ -175,18 +243,27 @@
         "soluciones": [
             "function decisionConMoneda(moneda, eleccion1, eleccion2) {\n  if (moneda === 'cara') {\n    return eleccion1;\n  } else {\n    return eleccion2;\n  }\n}",
             "function decisionConMoneda(moneda, eleccion1, eleccion2) {\n  return moneda === 'cara' ? eleccion1 : eleccion2;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada decisionConMoneda con tres parámetros: moneda, eleccion1, eleccion2\nVerificar si moneda es igual a 'cara'\nSi es igual a 'cara', retornar eleccion1\nSi no es igual a 'cara', retornar eleccion2"
         ]
     },
     "¡Envido!": {
         "explicacion": "La función valorEnvido retorna el valor de una carta de acuerdo con las reglas del envido. Si la carta está entre 10 y 12, su valor es 0. De lo contrario, su valor es igual a la numeración de la carta. Esta solución es directa y sencilla.",
         "soluciones": [
             "function valorEnvido(carta) {\n  if (carta >= 10 && carta <= 12) return 0;\n  return carta;\n}"
+        ],
+        "pseudocode": [
+            "Definir una función llamada valorEnvido con un parámetro: carta\nVerificar si la carta está entre 10 y 12\nSi la carta está en este rango, retornar 0\nSi no, retornar el valor de la carta"
         ]
     },
     "¡Quiero retruco!": {
         "explicacion": "La función puntosDeEnvidoTotales calcula los puntos de envido según las reglas del juego. Si las dos cartas son del mismo palo, se suman sus valores de envido más 20. Si no son del mismo palo, se toma el valor más alto entre las dos cartas.",
         "soluciones": [
             "function puntosDeEnvidoTotales(carta1, palo1, carta2, palo2) {\n  const mismoPalo = palo1 === palo2;\n  if (mismoPalo) return valorEnvido(carta1) + valorEnvido(carta2) + 20;\n  return Math.max(valorEnvido(carta1), valorEnvido(carta2));\n}"
+        ],
+        "pseudocode": [
+            "Definir la función puntosDeEnvidoTotales con los parámetros: carta1, palo1, carta2, palo2\nVerificar si ambos palos son iguales\nSi son iguales, sumar los valores de envido de ambas cartas y agregar 20\nSi no son iguales, devolver el valor máximo entre los dos valores de envido"
         ]
     },
     "¡Quiero vale cuatro!": {
@@ -194,6 +271,9 @@
         "soluciones": [
             "function valorCantoTruco(string) {\n  if (string === 'truco') {\n    return 2;\n  } else if (string === 'retruco') {\n    return 3;\n  } else {\n    return 4;\n  }",
             "function valorCantoTruco(string) {\n  return string === 'truco' ? 2 : string === 'retruco' ? 3 : 4;\n}"
+        ],
+        "pseudocode": [
+            "Definir la función valorCantoTruco con el parámetro: string\nVerificar si el string es 'truco' y devolver 2\nSi no, verificar si el string es 'retruco' y devolver 3\nSi no es ninguno de esos, devolver 4"
         ]
     },
     "¿Y el tablero?": {
@@ -230,18 +310,27 @@
         "explicacion": "En JavaScript, el operador + tiene un comportamiento distinto dependiendo de los tipos de datos que se operen. Si un número y un string se operan con +, el número se convierte a string y se concatenan. En este caso, la función elefantesEquilibristas toma un número y lo convierte a un string para crear una rima.",
         "soluciones": [
             "function elefantesEquilibristas(n) {\n return n + ' elefantes se balanceaban';\n}"
+        ],
+        "pseudocode": [
+            "Definir la función elefantesEquilibristas con el parámetro: n\nConcatenar n con el texto ' elefantes se balanceaban'\nRetornar la rima resultante"
         ]
     },
     "El círculo de la vida": {
         "explicacion": "Las funciones perimetroCirculo y areaCirculo calculan el perímetro y el área de un círculo, respectivamente, utilizando la fórmula matemática para cada uno. El valor de pi se aproxima a 3.14159265358979 para realizar los cálculos.",
         "soluciones": [
             "function perimetroCirculo(r) {\n  return 2 * 3.14159265358979 * r;\n}\nfunction areaCirculo(r) {\n  return 3.14159265358979 * (r * r);\n}"
+        ],
+        "pseudocode": [
+            "Definir la función perimetroCirculo con el parámetro: r\nMultiplicar 2 * pi * r y retornar el resultado\nDefinir la función areaCirculo con el parámetro: r\nMultiplicar pi por el radio elevado al cuadrado y retornar el resultado"
         ]
     },
     "Pienso que así es más fácil": {
         "explicacion": "Las variables nos permiten almacenar valores para reutilizarlos en varias partes del código. En este caso, se reemplazó el valor de pi por la variable pi para simplificar el código y facilitar cambios futuros.",
         "soluciones": [
             "let pi = 3.14159265358979;\nfunction perimetroCirculo(r) {\n  return 2 * pi * r;\n}\nfunction areaCirculo(r) {\n  return pi * (r * r);\n}"
+        ],
+        "pseudocode": [
+            "Definir la variable pi con el valor 3.14159265358979\nDefinir la función perimetroCirculo con el parámetro: r\nMultiplicar 2 * pi * r y retornar el resultado\nDefinir la función areaCirculo con el parámetro: r\nMultiplicar pi por el radio elevado al cuadrado y retornar el resultado"
         ]
     },
     "Esto no tiene valor": {
@@ -254,12 +343,18 @@
         "explicacion": "Es necesario inicializar las variables antes de usarlas. Las variables locales, declaradas dentro de una función, solo pueden ser utilizadas dentro de esa función, mientras que las variables globales pueden ser utilizadas en cualquier parte del programa. En este caso, la función 'ascensorSobrecargado' utiliza dos variables globales para calcular si el peso total de las personas excede la carga máxima.",
         "soluciones": [
             "const cargaMaximaEnKilogramos = 300;\n\nfunction ascensorSobrecargado(p) {\n  return p * pesoPromedioPersonaEnKilogramos > cargaMaximaEnKilogramos;\n}"
+        ],
+        "pseudocode": [
+            "Definir la constante cargaMaximaEnKilogramos con el valor 300\nDefinir la función ascensorSobrecargado con el parámetro: p\nMultiplicar p por el peso promedio de una persona\nSi el resultado es mayor que la carga máxima, retornar verdadero (true), si no, retornar falso (false)"
         ]
     },
     "La buena fortuna": {
         "explicacion": "Las variables en JavaScript pueden modificarse, y es posible actualizar su valor dentro de las funciones. En este caso, el procedimiento 'aumentarFortuna' duplica el valor de la variable global 'pesosEnMiBilletera'.",
         "soluciones": [
             "function aumentarFortuna() {\n  pesosEnMiBilletera *= 2;\n}"
+        ],
+        "pseudocode": [
+            "Definir la función aumentarFortuna\nAcceder a la variable global pesosEnMiBilletera\nMultiplicar el valor de pesosEnMiBilletera por 2"
         ]
     },
     "¿Y esto cuánto vale?": {
@@ -272,18 +367,27 @@
         "explicacion": "El operador '!' se utiliza para negar un valor booleano, lo que permite alternar entre dos estados. En este caso, el procedimiento 'usarCierre' alterna entre abrir y cerrar el cierre de la mochila al cambiar el valor de la variable 'mochilaAbierta'.",
         "soluciones": [
             "let mochilaAbierta = true;\n\nfunction usarCierre() {\n  mochilaAbierta = !mochilaAbierta;\n}"
+        ],
+        "pseudocode": [
+            "Inicializar la variable mochilaAbierta como verdadero (abierta)\nDefinir la función usarCierre\nCambiar el valor de mochilaAbierta a su opuesto (si es verdadero, se convierte en falso y viceversa)"
         ]
     },
     "Negar no cuesta nada": {
         "explicacion": "Al negarse la función 'esMayorDeEdad', se crea una nueva función 'esMenorDeEdad' que determina si una persona no es mayor de edad. Es una forma eficiente de reutilizar la lógica de la función original.",
         "soluciones": [
             "function esMayorDeEdad(n) {\n  return n >= 18;\n}\n\nfunction esMenorDeEdad(n) {\n  return !esMayorDeEdad(n);\n}"
+        ],
+        "pseudocode": [
+            "Definir la función esMayorDeEdad que verifica si una persona es mayor de 18 años\nDefinir la función esMenorDeEdad que invierte el resultado de esMayorDeEdad usando el operador '!'"
         ]
     },
     "Los peripatéticos": {
         "explicacion": "El operador '&&' se utiliza para combinar varias condiciones, y todas deben ser verdaderas para que la expresión total sea verdadera. En la función 'esPeripatetico', se evalúan tres condiciones: la profesión debe ser 'filósofo', la nacionalidad debe ser 'griego' y la cantidad de kilómetros caminados debe ser mayor a 2 para que una persona sea considerada peripatética.",
         "soluciones": [
             "function esPeripatetico(prof, nac, km) {\n  return prof === \"filósofo\" && nac === \"griego\" && km > 2;\n}"
+        ],
+        "pseudocode": [
+            "Definir la función esPeripatetico que verifica si la profesión es 'filósofo', la nacionalidad\nes 'griego' y la cantidad de kilómetros es mayor a 2\nSi todas las condiciones son verdaderas, retorna 'true', de lo contrario, 'false'"
         ]
     },
     "La verdad detrás de la conjunción": {
@@ -302,12 +406,18 @@
         "explicacion": "La función 'estaCerrado' ayuda a verificar si el banco está cerrado, lo que ocurre si es feriado, es fin de semana, o si no estamos dentro del horario bancario. Utiliza la función 'esFinDeSemana' para verificar el día y la función 'dentroDeHorarioBancario' para verificar el horario.",
         "soluciones": [
             "function estaCerrado(esFeriado, dia, horario) {\n  return esFeriado || esFinDeSemana(dia) || !dentroDeHorarioBancario(horario);\n}\nfunction esFinDeSemana(dia) {\n  return dia === 'sábado' || dia === 'domingo';\n}"
+        ],
+        "pseudocode": [
+            "Definir la función estaCerrado que recibe tres parámetros: esFeriado, dia, y horario.\nLa función retorna 'true' si es feriado, si el día es sábado o domingo,\no si el horario no está dentro del horario bancario.\nLa función esFinDeSemana verifica si el día es sábado o domingo."
         ]
     },
     "Claroscuro": {
         "explicacion": "La función 'tieneContraste' determina si el contraste entre el color de la letra y el fondo es adecuado. Esto se verifica comparando si uno de los colores es claro y el otro no lo es. Para eso, usa la función 'esTonoClaro' que verifica si un color es claro o no.",
         "soluciones": [
             "function tieneContraste(letra, fondo) {\n  return esTonoClaro(letra) !== esTonoClaro(fondo);\n}"
+        ],
+        "pseudocode": [
+            "Definir la función tieneContraste que recibe dos parámetros: letra y fondo.\nLa función retorna 'true' si uno de los colores es claro y el otro no lo es,\nlo cual se verifica usando la función esTonoClaro.\nLa función esTonoClaro determina si un color es claro o no."
         ]
     },
     "La verdad es que no hay una verdad": {
@@ -320,6 +430,9 @@
         "explicacion": "La disyunción lógica excluyente (xor) es un operador que devuelve verdadero si y solo si uno de los dos valores es verdadero, pero no ambos. En este caso, se puede definir como 'bool1 !== bool2', que es lo mismo que decir que los valores no son iguales.",
         "soluciones": [
             "function xor(bool1, bool2){\n  return bool1 !== bool2\n}"
+        ],
+        "pseudocode": [
+            "Definir la función xor que recibe dos parámetros: bool1 y bool2.\nLa función retorna verdadero si los valores de bool1 y bool2 no son iguales,\nes decir, si uno es verdadero y el otro es falso."
         ]
     },
     "Precedencia": {
@@ -332,6 +445,9 @@
         "explicacion": "La función 'sePuedeConcentrar' verifica si una persona puede concentrarse dependiendo de la bebida, la temperatura de la bebida y un valor booleano adicional que indica si la persona está en condiciones para concentrarse.",
         "soluciones": [
             "function sePuedeConcentrar(bebida, temp, bool){\n  const mate = bebida === \"mate\" && temp === 80\n  const teCaliente = bebida === \"té\" && temp >= 95\n  return (mate || teCaliente) && bool\n}"
+        ],
+        "pseudocode": [
+            "Definir la función sePuedeConcentrar que recibe tres parámetros: bebida, temp y bool.\nCrear una variable mate que verifica si la bebida es mate y la temperatura es igual a 80.\nCrear una variable teCaliente que verifica si la bebida es té y la temperatura es mayor o igual a 95.\nRetornar verdadero si alguno de los dos (mate o teCaliente) es verdadero\ny si la persona está en condiciones para concentrarse (bool)."
         ]
     },
     "¿Puedo subir?": {
@@ -339,6 +455,9 @@
         "soluciones": [
             "function puedeSubirse(m, doble, afeccion) {\n  if (m >= 1.5 || (m >= 1.2 && doble)) {\n    if (!afeccion) {\n      return true;\n    }\n  }\n  return false;\n}",
             "const puedeSubirse = (m, doble, affecion) => {\n  const cumpleAltura = m >= 1.5 || (m >= 1.2 && doble)\n  return cumpleAltura && !affecion\n}"
+        ],
+        "pseudocode": [
+            "Definir la función puedeSubirse que recibe tres parámetros: m (altura), doble\n(si está acompañado por un adulto) y afeccion (si tiene afecciones cardíacas).\nVerificar si la persona cumple con la altura mínima, o si tiene la altura adecuada\ny está acompañada por un adulto.\nSi cumple con estas condiciones, verificar que no tenga afecciones cardíacas.\nRetornar verdadero si cumple todas las condiciones, de lo contrario, retornar falso."
         ]
     },
     "Series favoritas": {
