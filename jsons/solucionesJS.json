@@ -231,7 +231,7 @@
     "Cartelitos óptimos": {
         "explicacion": "La función escribirCartelitoOptimo utiliza la longitud total del nombre y apellido para decidir si debe generar un cartelito corto o largo. Si la longitud total es mayor a 15, se genera un cartelito corto; de lo contrario, se genera uno largo. La función escribirCartelito ya está definida y se reutiliza.",
         "soluciones": [
-            "function escribirCartelitoOptimo(titulo, nombre, apellido) {\n  if ((nombre + apellido).length > 15) {\n    return escribirCartelito(titulo, nombre, apellido, true);\n  } else {\n    return escribirCartelito(titulo, nombre, apellido, false);\n  }\n}",
+            "function escribirCartelitoOptimo(titulo, nombre, apellido) {\n return escribirCartelito(titulo, nombre, apellido, longitud(nombre + apellido) > 15); \n}",
             "function escribirCartelitoOptimo(titulo, nombre, apellido) {\n  const optimo = (nombre + apellido).length > 15;\n  const cartelito = escribirCartelito(titulo, nombre, apellido, optimo);\n  return cartelito;\n}"
         ],
         "pseudocode": [
