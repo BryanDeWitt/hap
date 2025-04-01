@@ -1,0 +1,35 @@
+.items-lista {
+    list-style: none;
+    font-size: 25px;
+    text-align: left;
+}
+
+.titulo {
+    font-size: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.lista-soluciones {
+    margin-top: 35px;
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    place-content: center;
+}
+
+.volver {
+    margin-top: 100px;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    .items-lista {
+        font-size: 20px;
+    }
+
+    .volver {
+        font-size: 20px;
+    }
+
+}

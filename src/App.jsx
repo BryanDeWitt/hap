@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom'
 import './App.css'
+import { Eye, Brain} from '../svgs/Svgs'
 
 
 function App() {
-
-
   return (
     <>
-      <h1>Hurones a Programar</h1>
-      <h2>Recomendación: intentar resolver los ejercicios antes de mirar las soluciones</h2>
-      <Link to="/soluciones/javaScript" className='boton-soluciones'>Soluciones JavaScript</Link>
+      <div className='inicio'>
+        <Link to={"/conceptos"} ><button className='botones-inicio'><Brain /> Conceptos</button></Link>
+        <Link to="/soluciones" ><button className='botones-inicio'><Eye /> Soluciones</button></Link>
+      </div>
     </>
   )
 }

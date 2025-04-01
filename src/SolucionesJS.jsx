@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { leccionesJS, leccionesArray } from '../jsons/lecciones.js'
-import './javaScript.css'
+import './JavaScript.css'
 
 export const SolucionesJS = () => {
     const { id } = useParams()
@@ -11,7 +11,7 @@ export const SolucionesJS = () => {
                 <ul className='lista-soluciones'>
                     {
                         leccionesArray[id].map((solucion, index) => (
-                            <li key={index} className='lista'>
+                            <li key={index} className='items-lista'>
                                 <Link to={`/soluciones/javaScript/${id}/${index}`}>{index + 1}: {solucion}</Link>
                             </li>
                         ))

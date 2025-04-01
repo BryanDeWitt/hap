@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { leccionesArray } from '../jsons/lecciones'
 import soluciones from '../jsons/solucionesJS.json'
 import './solucion.css'
+import './Layout.css'
 import { useState } from 'react'
 
 export const Solucion = () => {
@@ -16,32 +17,36 @@ export const Solucion = () => {
     const handleButton = () => {
         if (show) setShow(false)
     }
+    const simboloMenos = "<"
+    const simboloMas = ">"
     
     return (
         <>
-            <h1>Solucion para: { leccion }</h1>
+            <h1 className='titulo'>Solucion para: { leccion }</h1>
             <h3 className='explicacion'>{ solucion.explicacion ? solucion.explicacion : 'No se ha encontrado la solucion' }</h3>
             <div className='botones'>
-                {Number(index) > 0 && <Link to={`/soluciones/javaScript/${id}/${Number(index) - 1 < 0 ? 0 : Number(index) - 1}`}><button onClick={handleButton}>Anterior</button></Link>}
+                {Number(index) > 0 && <Link to={`/soluciones/javaScript/${id}/${Number(index) - 1 < 0 ? 0 : Number(index) - 1}`}><button onClick={handleButton}>{simboloMenos} Anterior</button></Link>}
                 <button onClick={handleShow}>{ show ? 'Ocultar codigo' : 'Mostrar codigo' }</button>
-                {Number(index) < maxIndex && <Link to={`/soluciones/javaScript/${id}/${Number(index) + 1 > maxIndex ? maxIndex : Number(index) + 1}`}><button onClick={handleButton}>Siguiente</button></Link>}
+                {Number(index) < maxIndex && <Link to={`/soluciones/javaScript/${id}/${Number(index) + 1 > maxIndex ? maxIndex : Number(index) + 1}`}><button onClick={handleButton}>Siguiente {simboloMas}</button></Link>}
             </div>
-            { solucion.pseudocode && 
-                <>
-                <h2>Pseudo código</h2>
-                {
-                    solucion.pseudocode.map((solucion, index) => (
+            <div className="solution-body">
+                { solucion.pseudocode &&
+                    <>
+                    <h2 className='pseudo'>Pseudo código</h2>
+                    {
+                        solucion.pseudocode.map((solucion, index) => (
+                            <pre key={index} className='solucion'>{solucion}</pre>
+                        ))
+                    }
+                    </>
+                }
+                <h2 className='soluciones'>{ solucion.soluciones.length > 1 ? 'Soluciones' : 'Solucion' }</h2>
+                { show &&
+                    solucion.soluciones.map((solucion, index) => (
                         <pre key={index} className='solucion'>{solucion}</pre>
                     ))
-                }   
-                </>
-            }
-            <h2>{ solucion.soluciones.length > 1 ? 'Soluciones' : 'Solucion' }</h2>
-            { show &&
-                solucion.soluciones.map((solucion, index) => (
-                    <pre key={index} className='solucion'>{solucion}</pre>
-                ))
-            }
+                }
+            </div>
             <h2 className="volver">
                 <Link to={`/soluciones/javaScript/${id}`}>Volver</Link>
             </h2>
